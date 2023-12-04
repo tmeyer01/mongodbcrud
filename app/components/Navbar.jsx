@@ -7,7 +7,10 @@ function Navbar() {
       <Link className="text-white font-bold" href={"/"}>
         MongoDB CRUD
       </Link>
-      <Link className="text-white p-2" href={"/addTopic"}>
+      <Link
+        className="text-black p-2  bg-white cursor-pointer"
+        href={"/addTopic"}
+      >
         Add Topic
       </Link>
     </nav>

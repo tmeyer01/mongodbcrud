@@ -2,5 +2,9 @@ import TopicsList from "@/app/components/TopicsList";
 import Image from "next/image";
 
 export default function Home() {
-  return <TopicsList />;
+  return (
+    <>
+      <TopicsList />
+    </>
+  );
 }
