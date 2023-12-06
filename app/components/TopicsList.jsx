@@ -18,25 +18,24 @@ const getTopics = async () => {
   }
 };
 
-// Async function used as the getTopics function above is called and needs to have an await
 export default async function TopicsList() {
   const { topics } = await getTopics();
 
   return (
     <>
-      {topics.map((topic) => (
+      {topics.map((t) => (
         <div
-          key={topic._id}
+          key={t._id}
           className="p-4 border border-slate-300 my-3 flex justify-between gap-5 items-start"
         >
           <div>
-            <h2 className="font-bold text-2xl">{topic.title}</h2>
-            <div>{topic.description}</div>
+            <h2 className="font-bold text-2xl">{t.title}</h2>
+            <div>{t.description}</div>
           </div>
 
           <div className="flex gap-2">
-            <RemoveBtn id={topic._id} />
-            <Link href={`/editTopic/${topic._id}`}>
+            <RemoveBtn id={t._id} />
+            <Link href={`/editTopic/${t._id}`}>
               <HiPencilAlt size={24} />
             </Link>
           </div>
